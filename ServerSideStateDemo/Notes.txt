@@ -1,0 +1,26 @@
+﻿Server Side State Mgt:
+Security purposes, u don't have security in client side state mgt.
+
+1) Session
+In client side, one page to another page is the max reach of the values,
+but in server side it is available to the whole app till you donot logout
+of the app/ the app doesnot have a session time out.
+Session time out(default value=20 mins).
+
+2 types :
+ a) In Proc---the application dll process itself is used to store the data.
+ b) Out Proc----- other than the app, ie the database server or load balancing 
+ server will be used to store the data.
+ Working with Session
+ ---------------------
+  1) create 3 page 1,2 and 3.
+ on firstpage create session variable and redirect to the 2nd page.
+ On second show values and also on the 3rd page show the values.
+ Add Labels on every page to show the SessionID.
+ 2) Change the web.config file to set the timeout
+ 3) Change the Global.asax file to set the Session events and add debuggers to it.
+
+
+
+
+2) Application
